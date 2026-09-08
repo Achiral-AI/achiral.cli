@@ -80,7 +80,7 @@ function REPL({ config, initialPrompt }: Props) {
       }
     }
     void init()
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [])
 
   // ── Render ────────────────────────────────────────────────────────────────
 
