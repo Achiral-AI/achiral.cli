@@ -1,6 +1,6 @@
 # achiral.cli
 
-Developer CLI for [Achiral](https://achiral.ai) — connect to your organisation's AI model engine from the terminal.
+Developer CLI for [Achiral](https://achiral.ai) — connect to your organisation's AI memory-model core from the terminal.
 
 Chat with your organisation's shared intelligence (Chiro) or your personal EA directly from the command line. Supports interactive REPL mode, pipe-friendly headless mode, and session persistence across conversations.
 
