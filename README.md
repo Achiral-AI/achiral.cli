@@ -8,7 +8,8 @@ Chat with your organisation's shared intelligence (Chiro) or your personal EA di
 
 ## Prerequisites
 
-- **Node.js** 20+ or **Bun** 1.0+
+- **Node.js** 20+ to run the published CLI
+- **Bun** 1.0+ to build from source
 - An Achiral account with `developer` or `admin` role
 - An API token (generated from your Achiral dashboard)
 
@@ -16,7 +17,15 @@ Chat with your organisation's shared intelligence (Chiro) or your personal EA di
 
 ## Installation
 
-### Option 1 — Install from source (recommended while in private beta)
+### Option 1 — Install from npm
+
+```bash
+npm install -g @achiral/cli
+```
+
+This makes the `achiral` command available globally.
+
+### Option 2 — Install from source
 
 ```bash
 git clone https://github.com/Achiral-AI/achiral.cli.git
@@ -26,7 +35,7 @@ bun run build
 npm link        # makes `achiral` available globally
 ```
 
-### Option 2 — Run directly with Bun without installing
+### Option 3 — Run directly with Bun without installing
 
 ```bash
 git clone https://github.com/Achiral-AI/achiral.cli.git
@@ -180,6 +189,23 @@ If you are running Achiral locally, pass `--dev` to use `http://` instead of `ht
 achiral login --workspace localhost:3000 --token ach_sk_dev_token --dev
 achiral --dev
 ```
+
+## Publishing
+
+Before publishing the package to npm:
+
+```bash
+bun install
+bun run typecheck
+bun run lint
+bun run build
+npm pack --dry-run
+npm publish --access public --provenance
+```
+
+The published package installs the `achiral` binary from `dist/index.js`.
+The npm tarball is intentionally limited to the built CLI bundle, source map,
+README, and package metadata.
 
 ---
 

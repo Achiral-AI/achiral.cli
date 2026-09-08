@@ -1,8 +1,31 @@
 {
   "name": "@achiral/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Developer CLI for Achiral – connect to your organisation's AI model engine",
   "type": "module",
+  "license": "UNLICENSED",
+  "homepage": "https://achiral.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Achiral-AI/achiral.cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Achiral-AI/achiral.cli/issues"
+  },
+  "keywords": [
+    "achiral",
+    "ai",
+    "cli",
+    "assistant",
+    "agent",
+    "chiro",
+    "memory"
+  ],
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "README.md"
+  ],
   "bin": {
     "achiral": "./dist/index.js"
   },
@@ -10,8 +33,13 @@
     "dev": "bun run src/index.ts",
     "build": "bun build src/index.ts --outfile dist/index.js --target node --sourcemap",
     "build:prod": "bun build src/index.ts --outfile dist/index.js --target node --minify",
+    "prepack": "bun run build",
+    "pack:dry": "npm pack --dry-run",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^12.1.0",
