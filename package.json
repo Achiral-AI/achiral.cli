@@ -27,7 +27,7 @@
     "README.md"
   ],
   "bin": {
-    "achiral": "./dist/index.js"
+    "achiral": "dist/index.js"
   },
   "scripts": {
     "dev": "bun run src/index.ts",
