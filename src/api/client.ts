@@ -22,7 +22,7 @@ export class AchiralClient {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${this.token}`,
-        'X-Client': 'achiral-cli/0.1.0',
+        'X-Client': 'achiral-cli/0.1.2',
         ...init.headers,
       },
     })

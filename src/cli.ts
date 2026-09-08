@@ -10,7 +10,7 @@ export async function main(): Promise<void> {
   const program = new Command()
     .name('achiral')
     .description('Developer CLI for Achiral – AI-powered development with your organisation\'s model engine')
-    .version('0.1.0')
+    .version('0.1.2')
     .helpOption('-h, --help', 'Show help')
 
   // ── Default action: open interactive REPL ──────────────────────────────────

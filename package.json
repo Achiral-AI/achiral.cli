@@ -1,6 +1,6 @@
 {
   "name": "@achiral/cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Developer CLI for Achiral – connect to your organisation's AI model engine",
   "type": "module",
   "license": "UNLICENSED",
